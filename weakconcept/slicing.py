@@ -33,3 +33,7 @@ print(rev, 'rev')
 arr = list(range(1, 21))
 result = arr[5:-5]
 print(result)
+
+
+t = hash(tuple(1,2,3,4,5,6))
+print(t)
