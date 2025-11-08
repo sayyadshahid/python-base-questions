@@ -7,4 +7,5 @@ def cube(a):
 
 
 print(cube(2))
+# .
 print(square(2))

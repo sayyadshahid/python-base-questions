@@ -16,6 +16,7 @@ rollno2 = input("enter rno of 2nd student")
 s2_1 = int(input("enter subject 1 marks"))
 s2_2 = int(input("enter subject 2 marks"))
 s2_3 = int(input("enter subject 3 marks"))
+# .
 
 total2 = s2_1 + s2_2 + s2_3
 percentage2 = (total2 / 300) * 100
