@@ -5,4 +5,5 @@ def asci():
             print(f"{chr(i)}: {i}")
 
    
+# .
 asci()

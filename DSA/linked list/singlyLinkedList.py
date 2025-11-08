@@ -33,3 +33,5 @@ def display(head):
     print('->  '.join(elem))
 
 display(head)
+
+# .

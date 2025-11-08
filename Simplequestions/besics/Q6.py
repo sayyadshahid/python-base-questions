@@ -6,3 +6,4 @@ asci = ord(ch[0])
 print(f"{asci}")
 
     # ord ===> is use for get asci values
+# .

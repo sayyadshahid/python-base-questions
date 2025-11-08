@@ -12,4 +12,5 @@ def perfect(a):
             print(i)
     
 
+# .
 perfect(10)

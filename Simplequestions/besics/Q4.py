@@ -6,4 +6,5 @@ area = pi * r * r
 circum = 2 * pi * r
 
 print("area: ", area)
+# .
 print("circumfaranc: ", circum)
