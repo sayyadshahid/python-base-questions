@@ -13,9 +13,7 @@ queue.popleft()
 
 print(queue)
 
-
 print(queue[0])
-
 
 a = []
 a.append(20)
