@@ -16,5 +16,6 @@ def binary_search(arr, x):
     return -1
 
 
-a = [10,30, 20, 50, 30, 60]
+a = [10, 30, 20, 50, 30, 60]
+a.sort()   
 print(binary_search(a, 50))
