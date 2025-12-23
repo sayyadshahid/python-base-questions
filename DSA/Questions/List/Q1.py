@@ -1,0 +1,1 @@
+# 1. Create a list of 5 favorite foods and print them.

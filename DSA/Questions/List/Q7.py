@@ -1,0 +1,1 @@
+# 7. Write a program to reverse a list without using the reverse() function.

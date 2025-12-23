@@ -1,0 +1,1 @@
+# 6. Write a program to count how many times each element appears in a list.
