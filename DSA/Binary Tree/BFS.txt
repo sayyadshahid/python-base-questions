@@ -1,0 +1,62 @@
+===============================
+BREADTH FIRST SEARCH (BFS)
+===============================
+
+Definition:
+BFS (Breadth First Search) is a traversal technique in which we visit
+all neighboring nodes first before moving to the next level.
+
+Key Idea:
+- Level by level traversal
+- Visit all neighbors first
+- Uses queue
+
+Data Structure Used:
+- Queue
+
+Algorithm (Steps):
+1. Start from a node
+2. Mark node as visited
+3. Insert node into queue
+4. Remove node from queue and process it
+5. Insert all unvisited adjacent nodes into queue
+6. Repeat steps 4–5 until queue is empty
+
+Pseudocode:
+BFS(start):
+    create empty queue
+    mark start as visited
+    enqueue start
+
+    while queue not empty:
+        node = dequeue
+        print node
+        for each neighbor of node:
+            if neighbor not visited:
+                mark visited
+                enqueue neighbor
+
+Example Graph:
+        A
+       / \
+      B   C
+     / \
+    D   E
+
+BFS Traversal Order:
+A B C D E
+
+Time Complexity:
+O(V + E)
+
+Space Complexity:
+O(V)
+
+Applications:
+- Shortest path (unweighted graph)
+- Level order traversal
+- Network broadcasting
+- Finding minimum steps
+
+Memory Trick:
+BFS → Breadth First → Queue

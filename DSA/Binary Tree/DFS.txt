@@ -1,0 +1,59 @@
+===============================
+DEPTH FIRST SEARCH (DFS)
+===============================
+
+Definition:
+DFS (Depth First Search) is a traversal technique in which we visit a node
+and then go as deep as possible along one path before backtracking.
+
+Key Idea:
+- Go deep first
+- Backtrack when no node is left
+- Uses stack (recursion)
+
+Data Structure Used:
+- Stack
+- Recursion
+
+Algorithm (Steps):
+1. Start from a node
+2. Mark node as visited
+3. Print/process node
+4. Visit any unvisited adjacent node
+5. Repeat steps 2–4
+6. If no adjacent node exists, backtrack
+7. Continue until all nodes are visited
+
+Pseudocode:
+DFS(node):
+    mark node as visited
+    print node
+    for each neighbor of node:
+        if neighbor is not visited:
+            DFS(neighbor)
+
+Example Graph:
+        A
+       / \
+      B   C
+     / \
+    D   E
+
+DFS Traversal Order:
+A B D E C
+
+Time Complexity:
+O(V + E)
+
+Space Complexity:
+O(V)
+
+Applications:
+- Maze solving
+- Path finding
+- Cycle detection
+- Topological sorting
+- Tree traversal
+
+Memory Trick:
+DFS → Deep First → Stack
