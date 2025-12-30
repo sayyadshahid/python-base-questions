@@ -1,0 +1,138 @@
+==============================
+BUBBLE SORT – COMPLETE NOTES
+==============================
+
+DEFINITION:
+-----------
+Bubble Sort is a simple comparison-based sorting algorithm.
+It repeatedly compares adjacent elements and swaps them
+if they are in the wrong order.
+In each pass, the largest element moves to the end of the array,
+just like a bubble rising to the surface.
+
+------------------------------------------------------------
+
+WORKING PRINCIPLE:
+------------------
+1. Compare first two adjacent elements.
+2. If left element > right element, swap them.
+3. Move to the next pair.
+4. Continue till the end of the array.
+5. After each pass, the largest element is placed at the end.
+6. Repeat passes until no swapping occurs.
+
+------------------------------------------------------------
+
+EXAMPLE:
+--------
+Input Array:
+[-1, 2, -3, 4, 3]
+
+Pass 1:
+Compare -1 and 2 → no swap
+Compare 2 and -3 → swap → [-1, -3, 2, 4, 3]
+Compare 2 and 4 → no swap
+Compare 4 and 3 → swap → [-1, -3, 2, 3, 4]
+
+Pass 2:
+Compare -1 and -3 → swap
+Compare -1 and 2 → no swap
+Compare 2 and 3 → no swap
+
+Pass 3:
+No swaps → array is sorted
+
+------------------------------------------------------------
+
+ALGORITHM:
+----------
+1. Set flag = True
+2. While flag is True:
+      a. Set flag = False
+      b. For i = 1 to n-1:
+            If arr[i-1] > arr[i]:
+                Swap arr[i-1] and arr[i]
+                Set flag = True
+3. Stop when no swap happens
+
+------------------------------------------------------------
+
+PYTHON CODE:
+------------
+def bubble_sorting(arr):
+    n = len(arr)
+    flag = True
+
+    while flag:
+        flag = False
+        for i in range(1, n):
+            if arr[i - 1] > arr[i]:
+                arr[i - 1], arr[i] = arr[i], arr[i - 1]
+                flag = True
+    return arr
+
+------------------------------------------------------------
+
+WHY FLAG IS USED:
+-----------------
+Flag is used for optimization.
+If no swapping occurs in a complete pass,
+it means the array is already sorted,
+so the algorithm stops early.
+
+------------------------------------------------------------
+
+TIME COMPLEXITY:
+----------------
+Best Case (already sorted): O(n)
+Average Case: O(n^2)
+Worst Case (reverse sorted): O(n^2)
+
+------------------------------------------------------------
+
+SPACE COMPLEXITY:
+-----------------
+O(1)
+(In-place sorting, no extra memory used)
+
+------------------------------------------------------------
+
+STABILITY:
+----------
+Bubble Sort is a STABLE sorting algorithm.
+(Equal elements maintain their relative order)
+
+------------------------------------------------------------
+
+ADVANTAGES:
+-----------
+• Easy to understand
+• Simple to implement
+• Good for small datasets
+• Useful for learning sorting basics
+
+------------------------------------------------------------
+
+DISADVANTAGES:
+--------------
+• Very slow for large datasets
+• Not suitable for real-world large applications
+
+------------------------------------------------------------
+
+WHEN TO USE:
+------------
+• Learning purpose
+• Small input size
+• Exams and interviews
+
+------------------------------------------------------------
+
+ONE-LINE INTERVIEW ANSWER:
+-------------------------
+Bubble Sort repeatedly compares adjacent elements and swaps them
+until the array becomes sorted.
+
+==============================
+END OF NOTES
+==============================

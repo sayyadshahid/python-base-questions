@@ -1,0 +1,147 @@
+==============================
+INSERTION SORT 
+==============================
+
+DEFINITION:
+-----------
+Insertion Sort is a comparison-based sorting algorithm.
+It works the way we sort playing cards in our hand.
+The array is divided into two parts:
+• Sorted part (left side)
+• Unsorted part (right side)
+
+Elements from the unsorted part are picked one by one
+and inserted into their correct position in the sorted part.
+
+------------------------------------------------------------
+
+WORKING PRINCIPLE:
+------------------
+1. Assume the first element is already sorted.
+2. Pick the next element from the unsorted part.
+3. Compare it with elements in the sorted part.
+4. Shift all larger elements one position to the right.
+5. Insert the picked element at its correct position.
+6. Repeat until the array is fully sorted.
+
+------------------------------------------------------------
+
+EXAMPLE:
+--------
+Input Array:
+[-1, 2, 3, 4, 5, -9, 4, -2]
+
+Pass 1 (i = 1):
+Compare 2 with -1 → no change
+[-1, 2, 3, 4, 5, -9, 4, -2]
+
+Pass 2 (i = 2):
+Compare 3 with 2 → no change
+[-1, 2, 3, 4, 5, -9, 4, -2]
+
+Pass 5 (i = 5):
+Pick -9
+Shift 5, 4, 3, 2, -1 to right
+Insert -9 at beginning
+[-9, -1, 2, 3, 4, 5, 4, -2]
+
+Pass 6 (i = 6):
+Pick 4
+Shift 5 to right
+Insert 4
+[-9, -1, 2, 3, 4, 4, 5, -2]
+
+Pass 7 (i = 7):
+Pick -2
+Shift elements till correct position
+[-9, -2, -1, 2, 3, 4, 4, 5]
+
+------------------------------------------------------------
+
+ALGORITHM:
+----------
+1. For i = 1 to n-1:
+      a. For j = i down to 1:
+            If arr[j-1] > arr[j]:
+                Swap arr[j-1] and arr[j]
+            Else:
+                Break
+
+------------------------------------------------------------
+
+PYTHON CODE:
+------------
+def insertion_sort(arr):
+    n = len(arr)
+    for i in range(1, n):
+        for j in range(i, 0, -1):
+            if arr[j - 1] > arr[j]:
+                arr[j - 1], arr[j] = arr[j], arr[j - 1]
+            else:
+                break
+
+------------------------------------------------------------
+
+WHY "BREAK" IS USED:
+--------------------
+If arr[j-1] <= arr[j],
+it means the element is already at the correct position.
+So no more comparisons are needed for that pass.
+
+------------------------------------------------------------
+
+TIME COMPLEXITY:
+----------------
+Best Case (already sorted): O(n)
+Average Case: O(n^2)
+Worst Case (reverse sorted): O(n^2)
+
+------------------------------------------------------------
+
+SPACE COMPLEXITY:
+-----------------
+O(1)
+(In-place sorting, no extra memory used)
+
+------------------------------------------------------------
+
+STABILITY:
+----------
+Insertion Sort is a STABLE sorting algorithm.
+(Equal elements maintain their relative order)
+
+------------------------------------------------------------
+
+ADVANTAGES:
+-----------
+• Simple and easy to understand
+• Efficient for small datasets
+• Faster than Bubble Sort in practice
+• Adaptive (works faster on nearly sorted arrays)
+
+------------------------------------------------------------
+
+DISADVANTAGES:
+--------------
+• Slow for large datasets
+• Not suitable for big applications
+
+------------------------------------------------------------
+
+WHEN TO USE:
+------------
+• Small input size
+• Nearly sorted data
+• Exams and interviews
+• Learning sorting concepts
+
+------------------------------------------------------------
+
+ONE-LINE INTERVIEW ANSWER:
+-------------------------
+Insertion Sort inserts each element into its correct position
+in the already sorted part of the array.
+
+==============================
+END OF NOTES
+==============================

@@ -1,0 +1,134 @@
+==============================
+SELECTION SORT – COMPLETE NOTES
+==============================
+
+DEFINITION:
+-----------
+Selection Sort is a simple comparison-based sorting algorithm.
+It works by repeatedly selecting the SMALLEST element
+from the unsorted part of the array
+and placing it at the correct position in the sorted part.
+
+The array is divided into:
+• Sorted part (left side)
+• Unsorted part (right side)
+
+------------------------------------------------------------
+
+WORKING PRINCIPLE:
+------------------
+1. Start from the first element.
+2. Find the minimum element in the entire array.
+3. Swap it with the first element.
+4. Move the boundary of sorted part by one position.
+5. Repeat the process for the remaining unsorted part.
+6. Continue until the array is fully sorted.
+
+------------------------------------------------------------
+
+EXAMPLE:
+--------
+Input Array:
+[-1, 2, 3, 4, 5, -9, 4, -2]
+
+Pass 1 (i = 0):
+Minimum element = -9
+Swap -1 and -9
+[-9, 2, 3, 4, 5, -1, 4, -2]
+
+Pass 2 (i = 1):
+Minimum element = -2
+Swap 2 and -2
+[-9, -2, 3, 4, 5, -1, 4, 2]
+
+Pass 3 (i = 2):
+Minimum element = -1
+Swap 3 and -1
+[-9, -2, -1, 4, 5, 3, 4, 2]
+
+Final Sorted Array:
+[-9, -2, -1, 2, 3, 4, 4, 5]
+
+------------------------------------------------------------
+
+ALGORITHM:
+----------
+1. For i = 0 to n-1:
+      a. Set min_index = i
+      b. For j = i+1 to n-1:
+            If arr[j] < arr[min_index]:
+                min_index = j
+      c. Swap arr[i] and arr[min_index]
+
+------------------------------------------------------------
+
+PYTHON CODE:
+------------
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        min_index = i
+        for j in range(i + 1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+
+------------------------------------------------------------
+
+TIME COMPLEXITY:
+----------------
+Best Case: O(n^2)
+Average Case: O(n^2)
+Worst Case: O(n^2)
+
+(Note: Selection Sort always performs n^2 comparisons)
+
+------------------------------------------------------------
+
+SPACE COMPLEXITY:
+-----------------
+O(1)
+(In-place sorting, no extra memory used)
+
+------------------------------------------------------------
+
+STABILITY:
+----------
+Selection Sort is NOT a stable sorting algorithm.
+(Equal elements may change their relative order)
+
+------------------------------------------------------------
+
+ADVANTAGES:
+-----------
+• Simple and easy to understand
+• Performs minimum number of swaps
+• Works well for small datasets
+• In-place sorting algorithm
+
+------------------------------------------------------------
+
+DISADVANTAGES:
+--------------
+• Very slow for large datasets
+• Always O(n^2), even if array is already sorted
+• Not adaptive
+
+------------------------------------------------------------
+
+WHEN TO USE:
+------------
+• Small input size
+• When memory is limited
+• Exams and interview theory questions
+
+------------------------------------------------------------
+
+ONE-LINE INTERVIEW ANSWER:
+-------------------------
+Selection Sort repeatedly selects the minimum element
+from the unsorted part and places it at the correct position.
+
+==============================
+END OF NOTES
+==============================
