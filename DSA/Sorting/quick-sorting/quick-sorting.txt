@@ -1,0 +1,173 @@
+==============================
+QUICK SORT – COMPLETE NOTES
+==============================
+
+DEFINITION:
+-----------
+Quick Sort is a DIVIDE AND CONQUER based sorting algorithm.
+It selects a pivot element and partitions the array
+into two sub-arrays:
+• Elements less than or equal to pivot
+• Elements greater than pivot
+
+Then it recursively sorts both sub-arrays.
+
+------------------------------------------------------------
+
+DIVIDE AND CONQUER STEPS:
+------------------------
+1. Choose a pivot element.
+2. Partition the array around the pivot.
+3. Recursively apply quick sort on left sub-array.
+4. Recursively apply quick sort on right sub-array.
+5. Combine the result.
+
+------------------------------------------------------------
+
+PIVOT:
+------
+Pivot is the element around which the array is partitioned.
+Pivot can be:
+• First element
+• Last element
+• Middle element
+• Random element
+
+(In your code, LAST element is pivot)
+
+------------------------------------------------------------
+
+WORKING PRINCIPLE:
+------------------
+• Pick pivot
+• Place all smaller elements to left of pivot
+• Place all larger elements to right of pivot
+• Pivot reaches its correct position
+• Recursively sort left & right parts
+
+------------------------------------------------------------
+
+EXAMPLE:
+--------
+Input Array:
+[-2, 3, -9, 12, 4, 6, 3]
+
+Pivot = 3
+
+Left Sub-array (≤ pivot):
+[-2, -9, 3]
+
+Right Sub-array (> pivot):
+[12, 4, 6]
+
+After recursive sorting:
+[-9, -2, 3] + [3] + [4, 6, 12]
+
+Final Sorted Array:
+[-9, -2, 3, 3, 4, 6, 12]
+
+------------------------------------------------------------
+
+YOUR CODE (CORRECTED VERSION):
+------------------------------
+
+def quick_sort(arr):
+    n = len(arr)
+    if n <= 1:
+        return arr
+
+    p = arr[-1]              # pivot
+    print(p, '========p')
+
+    L = [x for x in arr[:-1] if x <= p]
+    R = [x for x in arr[:-1] if x > p]
+
+    print(L, '=====L===')
+    print(R, '=====R===')
+
+    L = quick_sort(L)
+    R = quick_sort(R)
+
+    print(L, '=====L')
+    print(R, '=====R')
+
+    return L + [p] + R
+
+------------------------------------------------------------
+
+IMPORTANT NOTE:
+---------------
+Quick Sort returns a NEW sorted array.
+So correct usage is:
+
+A = quick_sort(A)
+print(A)
+
+------------------------------------------------------------
+
+TIME COMPLEXITY:
+----------------
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n^2)
+(Occurs when pivot is always smallest or largest)
+
+------------------------------------------------------------
+
+SPACE COMPLEXITY:
+-----------------
+O(log n)   → Recursive call stack
+(Not in-place in this implementation)
+
+------------------------------------------------------------
+
+STABILITY:
+----------
+Quick Sort is NOT a stable sorting algorithm.
+
+------------------------------------------------------------
+
+ADVANTAGES:
+-----------
+• Very fast in practice
+• Efficient for large datasets
+• Uses divide and conquer
+• Cache friendly
+
+------------------------------------------------------------
+
+DISADVANTAGES:
+--------------
+• Worst case is O(n^2)
+• Not stable
+• Recursive overhead
+
+------------------------------------------------------------
+
+WHEN TO USE:
+------------
+• Large datasets
+• When average performance matters
+• Competitive programming
+• Interviews
+
+------------------------------------------------------------
+
+ONE-LINE INTERVIEW ANSWER:
+-------------------------
+Quick Sort selects a pivot, partitions the array around it,
+and recursively sorts the sub-arrays.
+
+------------------------------------------------------------
+
+QUICK COMPARISON (EXAM):
+-----------------------
+Bubble Sort   → O(n^2)
+Insertion Sort→ O(n^2)
+Selection Sort→ O(n^2)
+Merge Sort    → O(n log n)
+Quick Sort    → O(n log n) (average)
+
+==============================
+END OF NOTES
+==============================
