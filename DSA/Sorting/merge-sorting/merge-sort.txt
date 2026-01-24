@@ -1,0 +1,168 @@
+==============================
+MERGE SORT – COMPLETE NOTES
+==============================
+
+DEFINITION:
+-----------
+Merge Sort is a comparison-based, divide-and-conquer sorting algorithm.
+It works by:
+• Dividing the array into smaller subarrays
+• Sorting each subarray
+• Merging the sorted subarrays into one sorted array
+
+------------------------------------------------------------
+
+WORKING PRINCIPLE:
+------------------
+Merge Sort follows the Divide and Conquer technique:
+
+1. Divide the array into two halves.
+2. Recursively sort the left half.
+3. Recursively sort the right half.
+4. Merge the two sorted halves into a single sorted array.
+5. Repeat until the entire array is sorted.
+
+------------------------------------------------------------
+
+DIVIDE AND CONQUER STEPS:
+------------------------
+• Divide: Split the array into two halves.
+• Conquer: Recursively sort each half.
+• Combine: Merge the sorted halves.
+
+------------------------------------------------------------
+
+EXAMPLE:
+--------
+Input Array:
+[-1, 2, 3, 4, 5, -9, 4, -2]
+
+Step 1: Divide
+[-1, 2, 3, 4] | [5, -9, 4, -2]
+
+Step 2: Divide further
+[-1, 2] [3, 4] | [5, -9] [4, -2]
+
+Step 3: Single elements (already sorted)
+[-1] [2] [3] [4] [5] [-9] [4] [-2]
+
+Step 4: Merge
+[-1, 2] [3, 4] | [-9, 5] [-2, 4]
+
+Step 5: Merge again
+[-1, 2, 3, 4] | [-9, -2, 4, 5]
+
+Final Merge:
+[-9, -2, -1, 2, 3, 4, 4, 5]
+
+------------------------------------------------------------
+
+ALGORITHM:
+----------
+1. If array size is 1, return array.
+2. Find the middle index.
+3. Split the array into left and right halves.
+4. Recursively apply Merge Sort on both halves.
+5. Merge the two sorted halves into one sorted array.
+6. Return the merged array.
+
+------------------------------------------------------------
+
+PYTHON CODE:
+------------
+def merge_sort(arr):
+    n = len(arr)
+    
+    if n == 1:
+        return arr
+        
+    m = n // 2
+    L = arr[:m]
+    R = arr[m:]
+    
+    L = merge_sort(L)
+    R = merge_sort(R)
+    
+    i = j = k = 0
+    sorted_arr = [0] * n
+    
+    while i < len(L) and j < len(R):
+        if L[i] < R[j]:
+            sorted_arr[k] = L[i]
+            i += 1
+        else:
+            sorted_arr[k] = R[j]
+            j += 1
+        k += 1
+    
+    while i < len(L):
+        sorted_arr[k] = L[i]
+        i += 1
+        k += 1
+        
+    while j < len(R):
+        sorted_arr[k] = R[j]
+        j += 1
+        k += 1
+        
+    return sorted_arr
+
+------------------------------------------------------------
+
+TIME COMPLEXITY:
+----------------
+Best Case: O(n log n)
+Average Case: O(n log n)
+Worst Case: O(n log n)
+
+------------------------------------------------------------
+
+SPACE COMPLEXITY:
+-----------------
+O(n)
+(Extra space required for temporary arrays)
+
+------------------------------------------------------------
+
+STABILITY:
+----------
+Merge Sort is a STABLE sorting algorithm.
+(Equal elements maintain their relative order)
+
+------------------------------------------------------------
+
+ADVANTAGES:
+-----------
+• Very efficient for large datasets
+• Guaranteed O(n log n) time complexity
+• Stable sorting algorithm
+• Suitable for linked lists
+• Works well for external sorting
+
+------------------------------------------------------------
+
+DISADVANTAGES:
+--------------
+• Requires extra memory
+• Not an in-place sorting algorithm
+• Slower for very small datasets compared to simple sorts
+
+------------------------------------------------------------
+
+WHEN TO USE:
+------------
+• Large input size
+• When stable sorting is required
+• When time complexity matters more than space
+• Used in real-world applications (databases, libraries)
+
+------------------------------------------------------------
+
+ONE-LINE INTERVIEW ANSWER:
+-------------------------
+Merge Sort is a divide-and-conquer algorithm that recursively
+divides the array and merges sorted halves to produce a sorted array.
+
+==============================
+END OF NOTES
+==============================
