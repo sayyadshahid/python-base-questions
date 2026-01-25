@@ -1,0 +1,132 @@
+==============================
+LINEAR SEARCH – COMPLETE NOTES
+==============================
+
+DEFINITION:
+-----------
+Linear Search is a simple searching algorithm that checks
+each element of the array one by one
+until the required element is found or the list ends.
+
+------------------------------------------------------------
+
+WORKING PRINCIPLE:
+------------------
+1. Start from the first element of the array.
+2. Compare the current element with the target value.
+3. If match is found → return the index.
+4. If not → move to the next element.
+5. Repeat until the element is found or array ends.
+
+------------------------------------------------------------
+
+EXAMPLE:
+--------
+Input Array:
+[10, 30, 20, 50, 30, 60]
+
+Target Element:
+50
+
+Step 1:
+Compare 10 with 50 → Not equal
+
+Step 2:
+Compare 30 with 50 → Not equal
+
+Step 3:
+Compare 20 with 50 → Not equal
+
+Step 4:
+Compare 50 with 50 → ✔ Match found
+
+Element found at index 3
+
+------------------------------------------------------------
+
+ALGORITHM:
+----------
+1. For i = 0 to n - 1:
+      a. If arr[i] == key:
+            return i
+2. If loop ends:
+      return -1
+
+------------------------------------------------------------
+
+PYTHON CODE:
+------------
+def linear_search(arr, x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+
+
+a = [10, 30, 20, 50, 30, 60]
+print(linear_search(a, 50))
+
+------------------------------------------------------------
+
+OUTPUT:
+-------
+3
+
+------------------------------------------------------------
+
+TIME COMPLEXITY:
+----------------
+Best Case: O(1)
+Average Case: O(n)
+Worst Case: O(n)
+
+------------------------------------------------------------
+
+SPACE COMPLEXITY:
+-----------------
+O(1)
+(No extra memory used)
+
+------------------------------------------------------------
+
+STABILITY:
+----------
+Linear Search is NOT a sorting algorithm,
+so stability is NOT applicable.
+
+------------------------------------------------------------
+
+ADVANTAGES:
+-----------
+• Very simple and easy to understand
+• Works on both sorted and unsorted arrays
+• No preprocessing required
+• Useful for small datasets
+
+------------------------------------------------------------
+
+DISADVANTAGES:
+--------------
+• Slow for large datasets
+• Requires checking each element
+• Inefficient compared to Binary Search
+
+------------------------------------------------------------
+
+WHEN TO USE:
+------------
+• Small input size
+• Unsorted data
+• When simplicity is more important than speed
+• Exam and basic programming problems
+
+------------------------------------------------------------
+
+ONE-LINE INTERVIEW ANSWER:
+-------------------------
+Linear Search finds an element by checking
+each element of the list sequentially.
+
+==============================
+END OF NOTES
+==============================
