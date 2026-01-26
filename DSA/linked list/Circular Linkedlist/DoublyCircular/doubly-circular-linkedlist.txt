@@ -1,0 +1,136 @@
+========================================
+CIRCULAR DOUBLY LINKED LIST – COMPLETE NOTES
+========================================
+
+DEFINITION:
+-----------
+A Circular Doubly Linked List is a linear data structure
+where each node contains:
+• Data
+• A reference to the previous node
+• A reference to the next node
+
+The last node’s NEXT points to the first node
+and the first node’s PREV points to the last node.
+There is NO NULL pointer.
+
+----------------------------------------
+
+STRUCTURE OF A NODE:
+--------------------
+Each node has three parts:
+
+| PREV | DATA | NEXT |
+
+PREV → stores address of previous node
+DATA → stores value
+NEXT → stores address of next node
+
+----------------------------------------
+
+REPRESENTATION:
+---------------
+        ←─────────────────────────
+HEAD ⇄ [PREV | DATA | NEXT] ⇄ [PREV | DATA | NEXT] ⇄ [PREV | DATA | NEXT]
+        ─────────────────────────→
+
+• Last node NEXT → HEAD
+• Head PREV → Last node
+
+----------------------------------------
+
+WORKING PRINCIPLE:
+------------------
+• Each node knows its previous and next node
+• Traversal is possible in both directions
+• List forms a closed circular loop
+
+----------------------------------------
+
+WHY CIRCULAR DOUBLY LINKED LIST:
+--------------------------------
+• Two-way traversal
+• No NULL pointer handling
+• Efficient insertion and deletion
+• Ideal for navigation systems
+
+----------------------------------------
+
+BASIC OPERATIONS:
+-----------------
+• Create
+• Traverse (forward & backward)
+• Insert
+• Delete
+• Search
+
+----------------------------------------
+
+TRAVERSAL:
+----------
+Forward Traversal:
+HEAD → NEXT → NEXT → HEAD
+
+Backward Traversal:
+HEAD → PREV → PREV → HEAD
+
+----------------------------------------
+
+INSERTION OPERATIONS:
+---------------------
+1. Insertion at beginning
+2. Insertion at end
+3. Insertion at specific position
+
+----------------------------------------
+
+DELETION OPERATIONS:
+--------------------
+1. Deletion from beginning
+2. Deletion from end
+3. Deletion by value
+
+----------------------------------------
+
+ADVANTAGES:
+-----------
+• Traversal in both directions
+• No NULL pointer
+• Faster deletion
+• Useful in complex applications
+
+----------------------------------------
+
+DISADVANTAGES:
+--------------
+• Extra memory for PREV pointer
+• Complex implementation
+
+----------------------------------------
+
+TIME COMPLEXITY:
+----------------
+Access:        O(n)
+Insertion:     O(1)
+Deletion:      O(1)
+Searching:     O(n)
+
+----------------------------------------
+
+APPLICATIONS:
+-------------
+• Browser forward/backward navigation
+• Undo / Redo operations
+• Image viewers
+• Deque implementation
+
+----------------------------------------
+
+ONE-LINE INTERVIEW ANSWER:
+-------------------------
+A Circular Doubly Linked List is a list
+where nodes are connected circularly in both directions.
+
+========================================
+END OF NOTES
+========================================

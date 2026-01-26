@@ -1,0 +1,130 @@
+========================================
+CIRCULAR SINGLY LINKED LIST – COMPLETE NOTES
+========================================
+
+DEFINITION:
+-----------
+A Circular Singly Linked List is a linear data structure
+where each node contains:
+• Data
+• A reference to the next node
+
+The last node points back to the first node,
+forming a circular structure.
+There is NO NULL pointer.
+
+----------------------------------------
+
+STRUCTURE OF A NODE:
+--------------------
+Each node has two parts:
+
+| DATA | NEXT |
+
+DATA → stores value
+NEXT → stores address of next node
+
+----------------------------------------
+
+REPRESENTATION:
+---------------
+HEAD → [DATA | NEXT] → [DATA | NEXT] → [DATA | NEXT]
+          ↑__________________________________________|
+
+• Last node’s NEXT points to HEAD
+• No NULL pointer present
+
+----------------------------------------
+
+WORKING PRINCIPLE:
+------------------
+• Head stores the address of the first node
+• Last node links back to the head
+• Traversal stops when we reach HEAD again
+
+----------------------------------------
+
+WHY CIRCULAR SINGLY LINKED LIST:
+--------------------------------
+• Continuous traversal possible
+• No NULL pointer handling
+• Efficient looping structures
+• Less memory than doubly linked list
+
+----------------------------------------
+
+BASIC OPERATIONS:
+-----------------
+• Create
+• Traverse
+• Insert
+• Delete
+• Search
+
+----------------------------------------
+
+TRAVERSAL:
+----------
+Start from HEAD
+Continue until NEXT == HEAD again
+
+----------------------------------------
+
+INSERTION OPERATIONS:
+---------------------
+1. Insertion at beginning
+2. Insertion at end
+3. Insertion at specific position
+
+----------------------------------------
+
+DELETION OPERATIONS:
+--------------------
+1. Deletion from beginning
+2. Deletion from end
+3. Deletion by value
+
+----------------------------------------
+
+ADVANTAGES:
+-----------
+• Circular traversal
+• No NULL pointer
+• Efficient for repetitive processes
+• Saves memory compared to doubly list
+
+----------------------------------------
+
+DISADVANTAGES:
+--------------
+• Reverse traversal not possible
+• Complex logic than singly linked list
+
+----------------------------------------
+
+TIME COMPLEXITY:
+----------------
+Access:        O(n)
+Insertion:     O(1) (at beginning)
+Deletion:      O(1) (at beginning)
+Searching:     O(n)
+
+----------------------------------------
+
+APPLICATIONS:
+-------------
+• Round Robin Scheduling
+• Music Playlist (repeat mode)
+• CPU task scheduling
+• Multiplayer games
+
+----------------------------------------
+
+ONE-LINE INTERVIEW ANSWER:
+-------------------------
+A Circular Singly Linked List is a linked list
+where the last node points back to the first node.
+
+========================================
+END OF NOTES
+========================================
