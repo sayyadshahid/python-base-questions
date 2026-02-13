@@ -1,0 +1,25 @@
+Q1. Write Python program to search element in an array using linear search
+algorithm in iterative manner.
+Q2. Write recursive python program to search element in an array using linear
+search algorithm.
+Q3. Write Python program to search element in an array using binary search
+algorithm in iterative manner.
+Q4. Write recursive python program to search element in an array using binary
+search algorithm.
+Q5. Write Python program to sort elements in ascending order using bubble sort.
+Q6. Write Python program to sort elements in descending order using bubble sort.
+Q7. Write Python program to sort numbers in ascending order using insertion sort
+Q8. Write a Python program to sort numbers in descending order using insertion
+sort.
+Q9. Write Python program to create singly linked list and display it.
+Q10. Write Python program to create doubly linked list and display it.
+Q11. Write Python program to create doubly circular linked list and display it.
+Q12. Write Python program to reverse sentence using stack.
+Q13. Write Python program to reverse singly linked list.
+Q14. Write Python program to reverse doubly linked list and display it.
+Q15. Write Python Program to find length singly linked list.
+Q16. Write Python program to implement linear search algorithm.
+Q17. Write Python program to find length of static stack.
+Q18. Write Python program to find length of static queue.
+Q19. Write Python program to display peek elements of static stack.
+Q20. Write Python program to display peek elements of static queue.
