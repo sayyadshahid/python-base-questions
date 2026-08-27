@@ -166,11 +166,11 @@ print(f"  f-string center: '{name:^10}'")        # '  Alice   '
 print(f"  f-string with fill: '{name:*^10}'")    # '**Alice***'
 
 # format() method
-print(f"  format(): {} is {} years old".format(name, age))
-print(f"  format numbered: {1} is {0}".format("first", "second"))
+print("  format(): {} is {} years old".format(name, age))
+print("  format numbered: {1} is {0}".format("first", "second"))
 
 # % formatting (old style)
-print(f"  %% formatting: %s is %d years old" % (name, age))
+print("  %% formatting: %s is %d years old" % (name, age))
 
 # ============================================================
 # 10. STRING CONCATENATION
